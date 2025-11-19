@@ -1,0 +1,50 @@
+﻿Mennyi 12 + 8?|18|20|22|24|1
+Mennyi 15 × 4?|50|55|60|65|2
+Mennyi 100 - 37?|63|73|53|83|0
+Mennyi 144 ÷ 12?|11|12|13|14|1
+Mi az x értéke, ha 2x + 6 = 14?|3|4|5|6|1
+Mennyi 7²?|42|49|56|63|1
+Mennyi 25% az 80-ból?|15|20|25|30|1
+Mi az √64?|6|7|8|9|2
+Mennyi 3 + 4 × 5?|23|35|27|32|0
+Hány fokos egy egyenes szög?|90|180|270|360|1
+Mennyi 1/2 + 1/4?|1/3|3/4|2/3|1/6|1
+Mi a π közelítő értéke?|3.14|3.41|4.13|2.14|0
+Mennyi 2³?|6|8|9|12|1
+Hány oldala van egy háromszögnek?|2|3|4|5|1
+Mennyi 50% az 200-ból?|50|75|100|125|2
+Mi a következő szám: 2, 4, 8, 16, ...?|20|24|28|32|3
+Mennyi 9 × 9?|72|81|90|99|1
+Hány centiméter van 1 méterben?|10|50|100|1000|2
+Mennyi 45 + 55?|90|95|100|105|2
+Mi az x értéke, ha x - 12 = 8?|16|18|20|22|2
+Mennyi 10% a 150-ből?|10|15|20|25|1
+Hány fok van egy körben?|180|270|360|450|2
+Mennyi 6 × 7?|36|40|42|48|2
+Mi a √100?|9|10|11|12|1
+Mennyi 3/4 + 1/4?|1/2|3/4|1|2|2
+Hány óra van egy napban?|12|18|24|36|2
+Mennyi 8 × 12?|84|92|96|100|2
+Mi a következő prímszám a 7 után?|8|9|10|11|3
+Mennyi 200 ÷ 4?|40|45|50|55|2
+Hány másodperc van 1 percben?|30|60|90|120|1
+Mennyi 15²?|200|215|225|235|2
+Mi az x értéke, ha 3x = 21?|6|7|8|9|1
+Mennyi 75% az 400-ból?|250|275|300|325|2
+Hány milliméter van 1 centiméterben?|5|10|50|100|1
+Mennyi 11 × 11?|111|121|131|141|1
+Mi a √81?|7|8|9|10|2
+Mennyi 2/3 × 6?|3|4|5|6|1
+Hány perc van 2 órában?|60|90|120|150|2
+Mennyi 13 + 17?|25|28|30|32|2
+Mi az x értéke, ha x/5 = 4?|15|20|25|30|1
+Mennyi 5 × 5 × 5?|75|100|125|150|2
+Hány hét van egy évben (kb.)?|48|50|52|54|2
+Mennyi 300 - 145?|145|155|165|175|1
+Mi a következő szám: 1, 1, 2, 3, 5, 8, ...?|11|12|13|14|2
+Mennyi 20% az 500-ból?|50|75|100|125|2
+Hány fokos egy derékszög?|45|60|90|120|2
+Mennyi 17 × 3?|48|51|54|57|1
+Mi a √49?|6|7|8|9|1
+Mennyi 0.5 + 0.25?|0.5|0.65|0.75|0.85|2
+Hány nap van február hónapban szökőévben?|28|29|30|31|1
