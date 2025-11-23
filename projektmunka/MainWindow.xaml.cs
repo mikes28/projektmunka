@@ -1,10 +1,11 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
-
+    
 namespace KvizAlkalmazas
 {
 
@@ -25,15 +26,36 @@ namespace KvizAlkalmazas
 
         private void LoadQuestions()
         {
+
+            string[] files = Directory.GetFiles(@"./questions");
+            List<string> filenames = new List<string>();
+
+            foreach (string file in files)
+            {
+                string name = Path.GetFileNameWithoutExtension(file);
+                filenames.Add(name);
+            }
+
+            CategoriesListBox.ItemsSource = filenames;
+
+
+           
+        }
+
+
+        private void Start()
+        {
             allQuestions = new List<Question>();
-            string filePath = "kerdesek.txt";
+            Console.WriteLine(CategoriesListBox.SelectedValue);
+            string filePath = $"./questions/{CategoriesListBox.SelectedValue}.txt";
+            Console.Write(filePath);
 
             try
             {
                 if (!File.Exists(filePath))
                 {
-                    MessageBox.Show("A kerdesek.txt fájl nem található!\n\n" +
-                                  "Hozz létre egy kerdesek.txt fájlt a program mappájában.\n" +
+                    MessageBox.Show("A txt fájl nem található!\n\n" +
+                                  "Hozz létre egy kerdesek.txt fájlt a mappában.\n" +
                                   "Formátum: Kérdés|Válasz1|Válasz2|Válasz3|Válasz4|HelyesVálaszIndexe",
                         "Hiányzó fájl", MessageBoxButton.OK, MessageBoxImage.Error);
                     Application.Current.Shutdown();
@@ -80,9 +102,13 @@ namespace KvizAlkalmazas
             }
         }
 
+
+
       
         private void StartQuiz_Click(object sender, RoutedEventArgs e)
         {
+
+            Start();
             NameInputDialog nameDialog = new NameInputDialog();
             if (nameDialog.ShowDialog() == true)
             {
@@ -135,7 +161,7 @@ namespace KvizAlkalmazas
                 QuestionText.Text = q.QuestionText;
                 QuestionCounter.Text = $"Kérdés: {currentQuestionIndex + 1}/10";
 
-                QuestionProgress.Value = currentQuestionIndex + 1;
+                QuestionProgress.Value = currentQuestionIndex ;
 
                 Answer1.Content = q.Options[0];
                 Answer2.Content = q.Options[1];

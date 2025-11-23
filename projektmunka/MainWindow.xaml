@@ -52,18 +52,59 @@
                 <Setter.Value>
                     <ControlTemplate TargetType="Button">
                         <Border 
-                    Background="{TemplateBinding Background}" 
-                    BorderBrush="{TemplateBinding BorderBrush}"
-                    BorderThickness="{TemplateBinding BorderThickness}" 
-                    CornerRadius="10" Height="45">
-                            <ContentPresenter 
-                        HorizontalAlignment="Center" 
-                        VerticalAlignment="Center"/>
+                            Background="{TemplateBinding Background}" 
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}" 
+                            CornerRadius="10" Height="45">
+                                <ContentPresenter 
+                                    HorizontalAlignment="Center" 
+                                    VerticalAlignment="Center"/>    
                         </Border>
                     </ControlTemplate>
                 </Setter.Value>
             </Setter>
         </Style>
+
+
+
+        <Style x:Key="ListboxStyle" TargetType="ListBox">
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="Foreground" Value="{StaticResource secondaryC}"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="ListBox">
+                        <Border 
+                            MinWidth="16"
+                            Width="Auto"
+                            Background="{TemplateBinding Background}" 
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}" 
+                            CornerRadius="10">
+                            <ItemsPresenter
+                                    HorizontalAlignment="Center" 
+                                    VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        
+        
+        
+<Style TargetType="ListBoxItem">
+            <Setter Property="Width" Value="auto"></Setter>
+    <Style.Triggers>
+        <Trigger Property="IsSelected" Value="True">
+            <Setter Property="Foreground" Value="{StaticResource primaryC}"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+        </Trigger>
+    </Style.Triggers>
+</Style>
+        
     </Window.Resources>
 
 
@@ -78,24 +119,22 @@
 
         <!-- Üdvözlő Panel -->
         <StackPanel x:Name="WelcomePanel" Grid.Row="0" Grid.RowSpan="5" Visibility="Visible">
-            <TextBlock Style="{StaticResource HeaderStyle}" HorizontalAlignment="Center">
-                Matematika Kvíz Alkalmazás
-            </TextBlock>
+            <TextBlock Style="{StaticResource HeaderStyle}" HorizontalAlignment="Center" Text="Kvíz Alkalmazás"/>
 
-            <TextBlock FontSize="14" TextWrapping="Wrap" Margin="0,0,0,20" TextAlignment="Center">
-                Üdvözöljük a Matematika Kvíz alkalmazásban!
-<LineBreak/><LineBreak/>
-                • 10 véletlenszerű kérdést fogsz kapni 50 kérdésből
-<LineBreak/>
-                • Minden kérdéshez 4 válaszlehetőség tartozik
-<LineBreak/>
-                • Válassz egy válaszlehetőséget és kattints a "Válasz rögzítése" gombra
-<LineBreak/>
-                • Az eredmény automatikusan mentésre kerül
+            <TextBlock FontSize="14" TextWrapping="Wrap" Margin="0,0,0,20" TextAlignment="Center"><Run Text="Üdvözöljük a Kvíz alkalmazásban!"/><LineBreak/><LineBreak/><Run Text="• 10 véletlenszerű kérdést fogsz kapni 50 kérdésből"/><LineBreak/><Run Text="• Minden kérdéshez 4 válaszlehetőség tartozik"/><LineBreak/><Run Text="• Válassz egy válaszlehetőséget és kattints a &quot;Válasz rögzítése&quot; gombra"/><LineBreak/><Run Text="• Az eredmény automatikusan mentésre kerül"/></TextBlock>
+            <TextBlock FontSize="16" TextWrapping="Wrap" FontWeight="Bold" Margin="0,0,0,10" TextAlignment="Center">
+A Kérdések témaköre az alábbi listában választható ki:           
             </TextBlock>
+            <ListBox x:Name="CategoriesListBox" Style="{StaticResource ListboxStyle}"   HorizontalAlignment="Center"
+         Width="Auto" MinWidth="120" Margin="0,0,0,19"  >
+
+            </ListBox>
+
+
+
 
             <Button Content="Kvíz Indítása" Style="{StaticResource ButtonStyle}"
-                    Width="200" HorizontalAlignment="Center"
+                    Width="200"
                     Click="StartQuiz_Click"/>
         </StackPanel>
 
